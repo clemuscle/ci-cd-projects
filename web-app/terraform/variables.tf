@@ -1,12 +1,16 @@
 # Placeholder for variable definitions, adjust as needed
 variable "region" {
-  default = "eu-west-3"
+    default = "eu-west-3"
 }
 
 variable "aws_access_key" {
-  default = "XXX"
+    description = "My AWS access key"
+    type = string
+    sensitive = true
 }
 
 variable "aws_secret_key" {
-  default = "XXX"
+    description = "My AWS secret key"
+    type = string
+    sensitive = true
 }

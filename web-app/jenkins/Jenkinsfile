@@ -15,7 +15,7 @@ pipeline {
     stage('Apply Terraform') {
       steps {
         input 'Apply Terraform?'
-        sh 'terraform apply "tfplan"'
+        sh 'terraform apply "tfplan" -var-file="secret.tfvars"'
       }
     }
     stage('Configure Instance with Ansible') {
