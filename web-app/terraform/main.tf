@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "us-west-2"
+  region = "eu-west-3"
 }
 
 resource "aws_instance" "web" {
@@ -13,13 +13,13 @@ resource "aws_instance" "web" {
 }
 
 resource "aws_db_instance" "default" {
-  allocated_storage    = 20
-  storage_type         = "gp2"
+  allocated_storage    = 10
+  db_name              = "mydb"
   engine               = "mysql"
-  engine_version       = "5.7"
-  instance_class       = "db.t2.micro"
-  name                 = "mydb"
+  engine_version       = "8.0"
+  instance_class       = "db.t3.micro"
   username             = "admin"
-  password             = "mypassword"
-  parameter_group_name = "default.mysql5.7"
+  password             = "admin"
+  parameter_group_name = "default.mysql8.0"
+  skip_final_snapshot  = true
 }
