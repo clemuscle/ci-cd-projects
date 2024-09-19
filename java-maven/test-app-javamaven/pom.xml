@@ -17,6 +17,12 @@
         </repository>
     </distributionManagement>
 
+    <server>
+      <id>github</id>
+      <username>x-access-token</username>
+      <password>${env.GITHUB_TOKEN}</password>
+    </server>
+
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
