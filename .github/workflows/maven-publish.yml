@@ -8,6 +8,10 @@ on:
     branches:
       - main
 
+defaults:
+  run:
+    working-directory: java-maven/test-app-javamaven
+
 jobs:
   lint:
     runs-on: ubuntu-latest
