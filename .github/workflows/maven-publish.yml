@@ -82,7 +82,7 @@ jobs:
           settings-path: ${{ github.workspace }}
 
       - name: Build and Deploy
-        run: mvn clean deploy --settings ${{ github.workspace }}/settings.xml
+        run: mvn clean deploy --settings ${{ github.workspace }}/settings.xml -e
 
       - name: Test artifact
         run: echo "Testing artifact..." # Remplace cette étape avec des tests supplémentaires si nécessaires
