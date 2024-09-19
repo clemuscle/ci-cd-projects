@@ -24,7 +24,15 @@
     </properties>
 
     <dependencies>
-        <!-- Tes dépendances -->
+        <!-- Tes autres dépendances -->
+
+        <!-- Dépendance JUnit pour les tests -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
