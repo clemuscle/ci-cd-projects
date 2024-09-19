@@ -6,7 +6,7 @@
 
     <groupId>com.example</groupId>
     <artifactId>test-app-javamaven</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0</version>
 
     <!-- Distribution Management -->
     <distributionManagement>
@@ -24,15 +24,7 @@
     </properties>
 
     <dependencies>
-        <!-- Tes autres dépendances -->
-
-        <!-- Dépendance JUnit pour les tests -->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13.2</version>
-            <scope>test</scope>
-        </dependency>
+        <!-- Tes dépendances -->
     </dependencies>
 
     <build>
@@ -54,7 +46,6 @@
                 <artifactId>maven-deploy-plugin</artifactId>
                 <version>3.0.0-M1</version>
             </plugin>
-
         </plugins>
     </build>
 </project>
