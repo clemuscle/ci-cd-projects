@@ -24,8 +24,6 @@
     </properties>
 
     <dependencies>
-        <!-- Tes autres dépendances -->
-
         <!-- Dépendance JUnit pour les tests -->
         <dependency>
             <groupId>junit</groupId>
