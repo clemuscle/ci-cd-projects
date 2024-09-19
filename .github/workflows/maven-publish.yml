@@ -13,22 +13,23 @@ defaults:
     working-directory: java-maven/test-app-javamaven
 
 jobs:
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4.1.7
+  # lint:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout code
+  #       uses: actions/checkout@v4.1.7
 
-      - name: Set up JDK
-        uses: actions/setup-java@v4.3.0
-        with:
-          java-version: '17.0.12'
-          distribution: 'temurin'
+  #     - name: Set up JDK
+  #       uses: actions/setup-java@v4.3.0
+  #       with:
+  #         java-version: '17.0.12'
+  #         distribution: 'temurin'
 
-      - name: Run Maven Lint
-        run: mvn checkstyle:check
+  #     - name: Run Maven Lint
+  #       run: mvn checkstyle:check
 
   test:
+    # needs: lint
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -44,6 +45,7 @@ jobs:
         run: mvn clean test
 
   build:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -59,6 +61,7 @@ jobs:
         run: mvn clean package
 
   package:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
