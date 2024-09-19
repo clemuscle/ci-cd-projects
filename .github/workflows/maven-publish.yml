@@ -60,6 +60,7 @@ jobs:
         uses: actions/setup-java@v4.3.0
         with:
           java-version: '17.0.12'
+          distribution: 'jdk'
 
       - name: Build project
         run: mvn clean package
