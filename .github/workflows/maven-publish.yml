@@ -8,6 +8,10 @@ on:
     branches:
       - main
 
+permissions:
+  packages: write
+  contents: read
+
 defaults:
   run:
     working-directory: java-maven/test-app-javamaven
@@ -17,10 +21,10 @@ jobs:
   #   runs-on: ubuntu-latest
   #   steps:
   #     - name: Checkout code
-  #       uses: actions/checkout@v4.1.7
+  #       uses: actions/checkout@v4
 
   #     - name: Set up JDK
-  #       uses: actions/setup-java@v4.3.0
+  #       uses: actions/setup-java@v4
   #       with:
   #         java-version: '17.0.12'
   #         distribution: 'temurin'
@@ -33,10 +37,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4.1.7
+        uses: actions/checkout@v4
 
       - name: Set up JDK
-        uses: actions/setup-java@v4.3.0
+        uses: actions/setup-java@v4
         with:
           java-version: '17.0.12'
           distribution: 'temurin'
@@ -49,10 +53,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4.1.7
+        uses: actions/checkout@v4
 
       - name: Set up JDK
-        uses: actions/setup-java@v4.3.0
+        uses: actions/setup-java@v4
         with:
           java-version: '17.0.12'
           distribution: 'temurin'
@@ -65,13 +69,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4.1.7
-
-      - name: Set up JDK
-        uses: actions/setup-java@v4.3.0
-        with:
-          java-version: '17.0.12'
-          distribution: 'temurin'
+        uses: actions/checkout@v4
 
       - name: Set up JDK 17 and configure Maven
         uses: actions/setup-java@v4
@@ -79,7 +77,7 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           server-id: github  # Doit correspondre à l'id dans pom.xml
-          server-username: GITHUB_ACTOR  # Nom d'utilisateur GitHub
+          server-username: clemuscle  # Nom d'utilisateur GitHub
           server-password: ${{ secrets.GITHUB_TOKEN }}  # Token GitHub
           settings-path: ${{ github.workspace }}
 
