@@ -19,7 +19,7 @@ jobs:
         uses: actions/setup-java@v4.3.0
         with:
           java-version: '17.0.12'
-          distribution: 'jdk'
+          distribution: 'temurin'
 
       - name: Run Maven Lint
         run: mvn checkstyle:check
@@ -34,7 +34,7 @@ jobs:
         uses: actions/setup-java@v4.3.0
         with:
           java-version: '17.0.12'
-          distribution: 'jdk'
+          distribution: 'temurin'
 
       - name: Install dependencies and run tests
         run: mvn clean test
@@ -62,7 +62,7 @@ jobs:
         uses: actions/setup-java@v4.3.0
         with:
           java-version: '17.0.12'
-          distribution: 'jdk'
+          distribution: 'temurin'
 
       - name: Build project
         run: mvn clean package
