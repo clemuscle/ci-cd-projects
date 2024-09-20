@@ -1,4 +1,4 @@
-name: Maven CI Pipeline
+name: Maven CI/CD Pipeline
 
 on:
   push:
@@ -8,6 +8,10 @@ on:
     branches:
       - main
   workflow_dispatch:
+
+defaults:
+  run:
+    working-directory: java-maven/test-app-javamaven
 
 permissions:
   contents: write
