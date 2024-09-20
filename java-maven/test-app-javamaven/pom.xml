@@ -8,6 +8,14 @@
     <artifactId>test-app-javamaven</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
+    <!-- Configuration SCM -->
+    <scm>
+        <connection>scm:git:https://github.com/clemuscle/ci-cd-projects.git</connection>
+        <developerConnection>scm:git:git@github.com:clemuscle/ci-cd-projects.git</developerConnection>
+        <url>https://github.com/clemuscle/ci-cd-projects</url>
+        <tag>@{project.version}</tag>
+    </scm>
+
     <!-- Distribution Management -->
     <distributionManagement>
         <repository>
